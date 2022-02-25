@@ -1,0 +1,138 @@
+html {
+  font-family: "Noto Sans KR", sans-serif;
+}
+body {
+  margin: 0;
+}
+div,
+section,
+header,
+footer,
+p,
+h1,
+h2 {
+  box-sizing: border-box;
+}
+
+.header {
+  display: block;
+  max-width: 90vw;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+.global-width {
+  max-width: 620px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+.scroll-graphic {
+  overflow-x: hidden;
+  position: sticky;
+  top: 0;
+  width: 90vw;
+  height: 100vh;
+  margin: 0 auto;
+}
+.graphic-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: 0.5s;
+  will-change: opacity;
+}
+.visible {
+  opacity: 1;
+}
+.scene-img {
+  max-height: 100vh;
+}
+.scroll-text {
+  position: relative;
+  padding-bottom: 1px;
+}
+.step {
+  margin-bottom: 60vh;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: rgba(0, 0, 0, 0.3) 0 0 3px;
+}
+
+.background {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.bg {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.title-area {
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  font-family: Noto Sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+  letter-spacing: -0.005em;
+}
+
+.arrow {
+  width: 50px;
+  position: absolute;
+  left: 50%;
+  bottom: 5%;
+  transform: translate(-50%, 0%);
+}
+
+.explain {
+  text-align: center;
+  margin: 50px;
+}
+
+.country:hover {
+  fill: red;
+}
+
+.neonText {
+  color: black;
+  text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #0fa,
+    0 0 82px rgb(3, 95, 64), 0 0 92px rgb(15, 143, 100), 0 0 102px #0fa,
+    0 0 151px #0fa;
+  animation: flicker 1.5s infinite alternate;
+}
+
+@keyframes flicker {
+  0%,
+  18%,
+  22%,
+  25%,
+  53%,
+  57%,
+  100% {
+    text-shadow: 0 0 4px #fff, 0 0 11px #fff, 0 0 19px #fff, 0 0 40px #0fa,
+      0 0 80px #0fa, 0 0 90px #0fa, 0 0 100px #0fa, 0 0 150px #0fa;
+  }
+  20%,
+  24%,
+  55% {
+    text-shadow: none;
+  }
+}

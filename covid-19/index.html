@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
+    <title>Minseok Kim</title>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="https://unpkg.com/topojson-client@3"></script>
+    <script src="https://d3js.org/queue.v1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<header class="header">
+		<div class="bg">
+			<img class="background" src="images/vaccine.jpg" alt>
+		  </div>
+		  <div class="title-area">
+			<h1 class="neonText">코로나19 국내 발생 2년,<br/>끝나지 않는 굴레</h1>
+		  </div>
+		  <span class="arrow">
+			<img class="arrow" src="images/arrow.jpg" alt>
+		  </span>
+	</header>
+	<section class="scroll-content">
+		<div class="scroll-graphic">
+			<div class="graphic-item"><img class="scene-img" src="images/map1.jpg" alt=""></div>
+			<div class="graphic-item"><img class="scene-img" src="images/map2.jpg" alt=""></div>
+			<div class="graphic-item"><img class="scene-img" src="images/map3.jpg" alt=""></div>
+			<div class="graphic-item"><img class="scene-img" src="images/map4.jpg" alt=""></div>
+		</div>
+		<div class="scroll-text global-width">
+			<div class="step">
+				<h2>2020년 1월 18일</h2>
+				<p>
+				  중국 후베이성 우한에 사는 A씨(35)는 출국을 하루 앞두고 발열 오한 등 감기증상이
+				  나타났다. 시내 병원에서 진료를 받고 감기약을 처방받았다.
+				</p>
+			  </div>
+			<div class="step">
+				<h2>2020년 1월 19일</h2>
+				<p>
+				  A씨는 우한 공항에서 한국 인천으로 가는 비행기를 탔다. 가족 2명, 친구 가족 3명 등
+				  5명이 동행했다. 일본 여행을 가기 위해 인천에서 환승하는 일정이었다.
+				</p>
+			</div>
+			<div class="step">
+				<h2>2020년 1월 19일 12시 25분</h2>
+            	<p>
+              	비행기에서 내린 A씨가 인천공항 탑승동 게이트로 향했다. 테온을 쟀는데 38.0도가
+              	나왔다. 여기에 발열, 오한, 근육통, 콧물 증상이 있었다. 검역당국의 판단에 따라 A씨는
+              	임시격리실로 이동했다.
+            	</p>
+			</div>
+			<div class="step">
+				<h2>2020년 1월 19일 오후 3시경</h2>
+				<p>
+				A씨는 검역관과 임시격리실을 나와 공항 1층으로 나갔다. 건물 앞에 대기 중이던 구급
+				차로 인천의료원에 이송됐다. 1월20일 오전8시, A씨는 코로나19 확진 판정을 받았
+				다. A씨는 국내에서 확인된 첫 코로나19 환자였다.
+				</p>
+			</div>
+		</div>
+	</section>
+	<section class="page6">
+        <div class="statistics">
+          <div class="explain">
+            <p>
+              첫 코로나19 확진자 발생 후 2년이 흘렀다. 코로나19는 여전히 종식되지 않았다.
+              코로나 접종 완료율이 85%에 이르고 치료제까지 나왔지만 코로나는 끝날 기미가
+              없다. 오히려 델타보다 전파력이 3배 강한 오미크론 변이가 출현해 세계적으로 5
+              차 대유행을 일으키고 있다.
+            </p>
+          </div>
+          <svg id="map"></svg>
+          <script src=worldmap.js></script>
+        </div>
+      </section>
+      <section class="page7">
+        <div class="statistics">
+          <div class="explain">
+            <p>
+              국내도 오미크론 영향권에 들면서 한동안 진정세를 보이던 확진자가 증가세로 돌
+              아섰다. 2월 4일 0시 기준 일일 신규 확진자는 2만7443명이다. 이날까지 누적 확
+              진자는 93만4656명이다.
+            </p>
+            <div class="">
+              <canvas class="chart"></canvas>
+            </div>
+            <script src="chart.js"></script>
+          </div>
+        </div>
+      </section>
+	<script src="main.js"></script>
+</body>
+</html>
